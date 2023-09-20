@@ -1,6 +1,6 @@
 *{
-    margin: 0;
     padding: 0;
+    margin: 0;
 }
 
 @font-face {
@@ -12,24 +12,24 @@
     font-family: 'Merriweather';
     src: url("../fonts/Merriweather-Black.ttf");
 }
-body{
+body {
     background-color: #191411;
     font-family: 'Gilroy', sans-serif;
     color: white;
 }
 
-.container{
+.container {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.button{
+.button {
+    padding: 20px;
     border-radius: 8px;
     background: linear-gradient(96deg, #DA8023 0%, #E2B438 100%);
     width: 260px;
     height: 62px;
     box-sizing: border-box;
-    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,21 +40,30 @@ body{
     color: #191411;
 }
 
-.button:hover{
+.button:hover {
     background: linear-gradient(96deg, #ac6115 0%, #9e7a19 100%);
 }
 
-.main{
+.common_title {
+    text-align: center;
+    font-family: Merriweather, sans-serif;
+    font-size: 64px;
+    line-height: normal;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.main {
     overflow: hidden;
     background-image: url("../images/main_bg.png");
     background-position: top center;
 }
 
-.header{
+.header {
     padding: 40px 0;
 }
 
-.header .container{
+.header .container {
     display: flex;
     align-items: center;
 }
@@ -63,89 +72,266 @@ body{
     vertical-align: bottom;
 }
 
-.menu{
+.menu {
     margin-left: 191px;
 }
 
-.menu_list{
+.menu_list {
     list-style: none;
     display: flex;
 }
 
-.menu_item{
+.menu_item {
     margin-right: 88px;
 }
 
-.menu_item a{
+.menu_item a {
     font-size: 18px;
     color: #FFFFFF;
     text-decoration: none;
     cursor:pointer;
 }
 
-.menu_item a:hover{
+.menu_item a:hover {
     border-bottom: 2px solid white;
 }
 
-.currency{
+.currency {
+    padding: 6px;
+    margin-left: auto;
     border: 1px solid #FFFFFF;
     border-radius: 5px;
     width: 45px;
     height: 45px;
-    padding: 6px;
     box-sizing: border-box;
     text-align: center;
     cursor: pointer;
     line-height: 32px;
-    margin-left: auto;
 }
 
-.main_content{
+.main_content {
     padding-top: 103px;
     padding-bottom: 199px;
 }
 
-.main_content .container{
+.main_content .container {
   position: relative;
 }
 
-.main_info{
+.main_info {
     max-width: 608px;
 }
 
-.main_small_info{
+.main_small_info {
+    padding: 12px 16px;
     border-radius: 100px;
     background:  #D3320F;
-    padding: 12px 16px;
     display: inline-block;
     font-size: 18px;
 }
 
-.main_title{
+.main_title {
+    margin-bottom: 56px;
     font-family: Merriweather, sans-serif;
     font-size: 120px;
     font-weight: 900;
     line-height: 130%;
     letter-spacing: 0.003em;
     text-transform: uppercase;
-    margin-bottom: 56px;
 }
 
-.main_text{
+.main_text {
+    margin-bottom: 56px;
     font-size: 24px;
     line-height: 29px;
-    margin-bottom: 56px;
 }
 
-.main_image{
+.main_image {
     position: absolute;
     top: -123px;
     left: calc(100% - 991px)
 }
 
+.why {
+    padding-bottom: 180px;
+    background-image: url("../images/whybg.png");
+    background-position: top center;
+    background-size: initial;
+}
 
+.why_items {
+    margin-top: 60px;
+    display: grid;
+    gap:100px;
+    grid-template-columns: repeat(3, 312px);
+    justify-content: center;
+}
 
+.why_item {
+    text-align: center;
+}
+.why_item_title {
+    padding: 24px 0;
+    font-size: 24px;
+    line-height: 29px;
+}
 
+.why_item_text {
+    font-size: 16px;
+    line-height: 140%;
+}
+.products {
+    background-image: url("../images/burgers_bg.png");
+    background-position: top center;
+    background-size: 1400px;
+    padding-bottom: 180px;
+}
 
+.products_items {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 384px);
+    gap: 24px;
+}
 
+.products_item {
+    padding: 30px;
+    background: #211A16;
+    border: 1px solid #353535;
+    border-radius: 16px;
+}
+
+.products_item-image {
+    height: 250px;
+}
+
+.products_item-image img {
+    max-width: 100%;
+}
+
+.products_item_title {
+    font-size: 24px;
+    line-height: 29px;
+    padding: 24px 0;
+}
+
+.products_item_text {
+    margin-bottom: 24px;
+    font-size: 16px;
+    line-height: 140%;
+}
+
+.products_item_extra {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.products_item_price {
+    margin-bottom: 8px;
+    font-size: 32px;
+    line-height: 39px;
+}
+
+.products_item_weight {
+    color: #757575;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.button.product_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 182px;
+    height: 62px;
+}
+
+.button.product_button span:first-child {
+    margin-right: 10px;
+}
+
+.order {
+    padding-bottom: 180px;
+    background-image: url("../images/order_bg.png");
+    background-position: top center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.order .container {
+    position: relative;
+}
+.order_image {
+    position: absolute;
+    top: 0;
+    right: calc(100% - 764px);
+    z-index: -1;
+}
+
+.order_form {
+    padding: 60px 40px;
+    margin-top: 60px;
+    margin-left: 674px;
+    border-radius: 16px;
+    border: 1px solid #353535;
+    background:  #211A16;
+    max-width: 426px;
+    box-sizing: border-box;
+}
+
+.order_form_text {
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+}
+
+.order_form_inputs {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.order_form_input {
+    margin-bottom: 20px;
+    background: linear-gradient(95.61deg, #DA8023 0%, #E2B438 100%);
+    width: 344px;
+    height: 62px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.order_form_input input {
+    padding: 20px 10px;
+    background: #211A16;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    width: 342px;
+    height: 60px;
+    box-sizing: border-box;
+    outline: none;
+    color: white;
+}
+
+.order_form_inputs .button {
+    width: 344px;
+    height: 62px;
+}
+
+.footer {
+    padding: 60px 0;
+}
+
+.footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rights {
+    font-size: 16px;
+    line-height: 20px;
+}
 
